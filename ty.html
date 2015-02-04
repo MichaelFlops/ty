@@ -1,0 +1,49 @@
+<head>
+  <title>Tyler Smith</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+</body>
+
+
+<template name="famousInit">
+	{{> menu}}
+	{{>Surface template="main" class="main"
+		size="[undefined,undefined]" translate=menuTranslate}}
+</template>
+
+<template name="menu">
+	{{#SequentialLayout id="menu" size="[400,500]" translate="[0,35]"}}
+		{{>strip icon="search" text="PROJECTS"}}
+		{{>strip icon="star" text="GITHUB"}}
+		{{>strip icon="group" text="TWITTER"}}
+		{{>strip icon="cog" text="EMAIL"}}
+		{{>strip icon="mail" text="RESUME"}}
+	{{/SequentialLayout}}
+</template>
+
+<!-- Here we use a regular Meteor template to create a reusable "strip" -->
+<template name="strip">
+	{{#View size="[undefined,50]"}}
+
+		{{!-- Background and text --}}
+		{{#Surface class="strip" size="[undefined,50]" rotateZ="-10" skewZ="-10"}}
+			{{text}}
+		{{/Surface}}
+
+		{{!-- Icon (which is not rotated/skewed) --}}
+		{{#Surface class="icon" size="[50,50]" translate="[30,0]"}}
+			<i class="fa fa-{{icon}}"></i>
+		{{/Surface}}
+
+	{{/View}}
+</template>
+
+<template name="main">
+	<h1>I am Tyler</h1>
+	<h3> Welcome </h3>
+	<p>I am always wrong, which is a lot of fun. I can't help but wonder if I'm going to grow to become someone that would never build a website for himself. If I consider the ramifications of this idea too much, I'm going to get distracted.
+	</p>
+	<p>Also, I love you.</p>
+</template>

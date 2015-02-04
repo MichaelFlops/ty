@@ -1,0 +1,44 @@
+.strip {
+	background: black;
+	color: white;
+	font-size: 26px;
+	line-height: 45px;
+	font-family: verdana;
+	border-bottom: 2px solid white;
+	padding-left: 80px;
+
+}
+
+.icon {
+	color: white;
+	font-size: 26px;
+	font-family: verdana;
+
+}
+
+.main {
+	padding: 20px;
+	background: white;
+	opacity: 0.1;
+	position: absolute;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000000000000000000000000000000000000;
+  width: 100%;
+  height: auto;
+}
+
+#imgFix {
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000000000000000000000000000000000000;
+  width: 100%;
+  height: auto;
+}
